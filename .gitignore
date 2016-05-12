@@ -16,3 +16,17 @@ java/.idea/java.iml
 java/.idea/misc.xml
 
 java/.idea/modules.xml
+
+*.txt
+
+*.class
+
+*.iml
+
+*.xml
+
+*.o
+
+*.hi
+
+haskell/grep

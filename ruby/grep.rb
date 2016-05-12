@@ -3,5 +3,5 @@ if ( ARGV.length < 2 )
 else
   term = ARGV[0]
   filepath = ARGV[1]
-  File.foreach(filepath) { |line| puts line if line.contains? term }
+  File.foreach(filepath) { |line| puts line if line.include? term }
 end
