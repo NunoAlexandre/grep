@@ -11,16 +11,17 @@ public class Main {
             System.out.println("usage: grep term file");
         }
         else {
-            String term = args[0];
-            String file = args[1];
-            Path filePath = Paths.get(file);
-            try {
-                Files.lines(filePath).filter(line -> line.contains(term))
-                        .forEachOrdered(line -> System.out.println(line));
+            try { 
+                grep(args[0], args[1]);
             }
             catch (IOException e) {
                 System.out.println("Got an IOException");
             }
         }
+    }
+
+    public static void grep(String term, String filepath) throws IOException {
+        Files.lines(Paths.get(filepath)).filter(line -> line.contains(term))
+                        .forEachOrdered(line -> System.out.println(line));
     }
 }
