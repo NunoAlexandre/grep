@@ -7,6 +7,7 @@ end
 if ( ARGV.length < 2 )
     puts "usage: grep term file"
 else
-    grep(ARGV[0], ARGV[1])
+	term = ARGV[0]
+    file = ARGV[1]
+    grep(ARGV[0], file)
 end
-
