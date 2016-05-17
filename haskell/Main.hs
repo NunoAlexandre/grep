@@ -9,4 +9,4 @@ dispatch (term:file:_) = grep term file
 dispatch _ = putStrLn "usage: grep term file"
 
 grep :: String -> FilePath -> IO ()
-grep term file = fmap lines (readFile file) >>= mapM_ putStrLn . filter (isInfixOf term)
+grep term file = readFile file >>= mapM_ putStrLn . filter (isInfixOf term) . lines
