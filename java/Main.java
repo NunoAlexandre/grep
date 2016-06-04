@@ -11,8 +11,10 @@ public class Main {
             System.out.println("usage: grep term file");
         }
         else {
+            String term = args[0];
+            String file = args[1];
             try { 
-                grep(args[0], args[1]);
+                grep(term, file);
             }
             catch (IOException e) {
                 System.out.println("Got an IOException");
